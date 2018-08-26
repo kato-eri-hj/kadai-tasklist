@@ -37,9 +37,6 @@ public class Task {
     @Column(name= "updated_at", nullable= false)
     private Timestamp updated_at;
 
-    @Column(name= "due_date", nullable= false)
-    private Timestamp due_date;
-
     public Integer getId() {
         return id;
     }
@@ -80,11 +77,4 @@ public class Task {
         this.updated_at = updated_at;
     }
 
-    public Timestamp getDue_date() {
-        return due_date;
-    }
-
-    public void setDue_date(Timestamp due_date) {
-        this.due_date = due_date;
-    }
 }
