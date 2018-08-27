@@ -10,7 +10,6 @@
                         <c:out value="${task.id}" />
                     </a>
                         <c:out value="${task.title}" />
-                        <c:out value="${task.content}" />
                 </li>
             </c:forEach>
         </ul>
