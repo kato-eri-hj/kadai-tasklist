@@ -6,15 +6,15 @@
         <ul>
             <c:forEach var="task" items="${tasks}">
                 <li>
-                    <a href="${pageContext.request.ContextPath}/show?id=${message.id}">
-                        <c:out value="${messae.id}" />
+                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">
+                        <c:out value="${task.id}" />
                     </a>
-                        <c:out value="${message.title}" />
-                        <c:out value="${message.content}" />
+                        <c:out value="${task.title}" />
+                        <c:out value="${task.content}" />
                 </li>
             </c:forEach>
         </ul>
 
-        <p><a href="${pageContext.request.ContextPath}/new}">新規メッセージの投稿</a></p>
+        <p><a href="${pageContext.request.contextPath}/new">新規メッセージの投稿</a></p>
     </c:param>
 </c:import>
