@@ -41,8 +41,8 @@ public class CreateServlet extends HttpServlet {
 		    String title = request.getParameter("title");
 		    t.setTitle(title);
 
-		    String task = request.getParameter("task");
-		    t.setContent(task);
+		    String content = request.getParameter("content");
+		    t.setContent(content);
 
 		    Timestamp currentTime = new Timestamp(System.currentTimeMillis());
 		    t.setCreated_at(currentTime);
@@ -51,7 +51,7 @@ public class CreateServlet extends HttpServlet {
 		    em.getTransaction().begin();
 		    em.persist(t);
 		    em.getTransaction().commit();
-		    request.getSession().setAttribute("flush", "登録が完了しました");
+		    request.getSession().setAttribute("flush", "登録が完了しました。");
 		    em.close();
 
 		    response.sendRedirect(request.getContextPath()+"/index");
